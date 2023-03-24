@@ -16,7 +16,7 @@
             Buatlah form menggunakan PHP dan hitung rumus dari bangun datar
             jajar genjang
           </p>
-          <a href="/TugasPHP1"><button>Demo Tugas PHP 1</button></a>
+          <a href="TugasPHP1"><button>Demo Tugas PHP 1</button></a>
         </section>
         <section class="card">
           <p>
@@ -35,21 +35,21 @@
             Jika sudah menikah dan anak antara 3 - 5 = 10% dari gapok
             <br />
             Selain itu belum dapat tunjangan keluarga
-            <br />
+            <br /><br />
             4. Tentukan gaji kotor
             <br />
             5. Tentukan zakat_profesi (ternary)
             <br />
             Jika ia muslim dan gaji kotor minimal 6 juta, ada zakat = 2.5% dari gaji kotor.
             Selain itu tidak ada zakat
-            <br />
+            <br /><br />
             6. Tentukan take home pay
             <br />
 
             Masukan sourcode ke github dan copas link ke LMS<br />
 
           </p>
-          <a href="/TugasPHP2"><button>Demo Tugas PHP 1</button></a>
+          <a href="TugasPHP2"><button>Demo Tugas PHP 2</button></a>
         </section>
       </section>
     </div>
