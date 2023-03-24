@@ -13,7 +13,8 @@
 
 - Homepage : <a href="https://wasi.nasihosting.com/">Demo HomePage</a>
 - Tugas 1 : <a href="https://wasi.nasihosting.com/TugasPHP1/">Demo Tugas 1</a>
+- Tugas 2 : <a href="https://wasi.nasihosting.com/TugasPHP2/">Demo Tugas 2</a>
 
 ## Note
 
-Repository saya jalankan di Hosting Gratis <a href="https://xcodehoster.com/">XCODEHOSTER</a> PT. Teknologi Server Indonesia.
+Repository ini, saya jalankan di Hosting Gratis <a href="https://xcodehoster.com/">XCODEHOSTER</a> PT. Teknologi Server Indonesia.
