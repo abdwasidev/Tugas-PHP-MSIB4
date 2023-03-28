@@ -46,10 +46,18 @@
             6. Tentukan take home pay
             <br />
 
-            Masukan sourcode ke github dan copas link ke LMS<br />
-
           </p>
           <a href="TugasPHP2"><button>Demo Tugas PHP 2</button></a>
+        </section>
+        <section class="card">
+          <p>
+            Tugas<br />
+            1. Buat grade<br />
+            2. Buat Keterangan jumlah mahasiswa, nilai tertinggi, nilai terendah, rata rata Masukan kedalam tfoot<br />
+            3. Buat predikat dari nilai menggunakan switch case<br />
+
+          </p>
+          <a href="TugasPHP3"><button>Demo Tugas PHP 3</button></a>
         </section>
       </section>
     </div>

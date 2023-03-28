@@ -1,0 +1,91 @@
+@import url("https://fonts.googleapis.com/css2?family=Albert+Sans:ital,wght@0,200;0,400;0,700;1,400&display=swap");
+
+:root {
+  max-width: 1600px;
+  --blue-bg: #f2f5ff;
+  --blue-color: #6e91fe;
+  --soft-color: rgba(110, 145, 254, 0.25);
+  --white-bg: #ffffff;
+  --black-bg: #000;
+  --green-cl: rgba(28, 150, 162, 0.5);
+}
+
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+body {
+  font-family: "Albert Sans", sans-serif;
+  background-color: var(--white-bg);
+}
+
+a {
+  text-decoration: none;
+}
+
+.main-content {
+  margin: 30px;
+}
+
+h1 {
+  padding: 20px 0;
+}
+
+.card {
+  border-radius: 5px;
+  background-color: var(--green-cl);
+  background: var(--blue-bg);
+  color: var();
+}
+
+.card > * {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  margin: 10px;
+  padding: 10px;
+}
+
+button {
+  width: 100%;
+  padding: 10px;
+  border-radius: 5px;
+  border: 0;
+  font-weight: bold;
+  background-color: var(--white-bg);
+  color: var(--blue-color);
+}
+
+button:hover {
+  background-color: var(--blue-color);
+  color: var(--white-bg);
+}
+
+form {
+  display: flex;
+  flex-direction: column;
+}
+
+input[type="number"],
+button[type="submit"] {
+  padding: 15px 20px;
+  margin: 8px 0;
+  display: inline-block;
+  border: 1px solid #ccc;
+  border-radius: 4px;
+  box-sizing: border-box;
+}
+
+.hasil {
+  padding: 2px 5px;
+  border-radius: 2px;
+  font-weight: bold;
+  background-color: var(--blue-color);
+  color: var(--blue-bg);
+}
+
+.text {
+  font-size: 10px;
+}
