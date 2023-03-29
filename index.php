@@ -59,6 +59,14 @@
           </p>
           <a href="TugasPHP3"><button>Demo Tugas PHP 3</button></a>
         </section>
+        <section class="card">
+          <p>
+            Buatlah Tampilan Form seperti dibawah ini<br />
+            1. Hitung skor skill<br />
+            2. Tentukan ketegori skill dengan fungsi<br />
+          </p>
+          <a href="TugasPHP4"><button>Demo Tugas PHP 4</button></a>
+        </section>
       </section>
     </div>
   </body>
