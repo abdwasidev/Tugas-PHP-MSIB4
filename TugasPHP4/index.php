@@ -1,7 +1,7 @@
 <?php
 $ar_prodi = ["SI"=>"Sistem Informasi", "TI"=>"Teknik Informatika","ILKOM"=>"Ilmu Komputer","TE"=>"Teknik Elektro"];
 
-$ar_skill = ["HTML"=>10,"CSS"=>10, "Javascript"=>20, "RWD Bootstrap"=>20, "PHP"=>30, "MySQL"=>30,"Laravel"=>40];
+$ar_skill = ["HTML"=>10,"CSS"=>10, "Javascript"=>20, "RWD Bootstrap"=>20, "PHP"=>30, "Typescript"=>30, "MySQL"=>30,"Laravel"=>40];
 $domisili = ["Jakarta","Bandung","Bekasi","Malang","Surabaya", "lainnya"];
 
 ?>
@@ -25,8 +25,12 @@ $domisili = ["Jakarta","Bandung","Bekasi","Malang","Surabaya", "lainnya"];
             1. Hitung skor skill<br />
             2. Tentukan ketegori skill dengan fungsi<br /><br />
             <div class="image">
-                <img src="./img/formresult.png" alt="">
-                <img src="./img/kategori.png" alt="">
+                <div>
+                    <img src="https://raw.githubusercontent.com/abdwasidev/Tugas-PHP-MSIB4/main/TugasPHP4/img/formresult.png" alt="">
+                </div>
+                <div>
+                    <img src="https://raw.githubusercontent.com/abdwasidev/Tugas-PHP-MSIB4/main/TugasPHP4/img/kategori.png" alt="">
+                </div>
             </div>
           </p>
         </div>
@@ -37,11 +41,11 @@ $domisili = ["Jakarta","Bandung","Bekasi","Malang","Surabaya", "lainnya"];
             <form method="POST">
                 <!-- NAMA -->
                 <label for="yourName">Nama</label>
-                <input type="text" name="yourName" placeholder="Nama"/><br />
+                <input type="text" name="yourName" placeholder="Nama" required/><br />
 
                 <!-- NIM -->
                 <label for="nim">NIM</label>
-                <input type="number" name="nim" placeholder="NIM"/><br />
+                <input type="number" name="nim" placeholder="NIM"/ required><br />
 
                 <!-- Jenis Kelamin -->
                 <label for="jenisKelamin">Jenis Kelamin</label>
@@ -107,38 +111,110 @@ $domisili = ["Jakarta","Bandung","Bekasi","Malang","Surabaya", "lainnya"];
                     ?>
                 </select><br />
 
-                <!-- NAMA -->
-                <label for="yourEmail">Nama</label>
-                <input type="email" name="yourEmail" placeholder="Email"/><br />
+                <!-- Email -->
+                <label for="yourEmail">Email</label>
+                <input type="email" name="yourEmail" placeholder="Email" required/><br />
                 
                 <!-- Submit -->
                 <input type="submit" name="submit" placeholder="Submit"/>
             </form>
             <br />
+            <div class="data-hasil">
             <?php 
+            error_reporting(E_ERROR | E_PARSE);
+
+                function getScoreSkill($setSkill){
+                    // $sumScore = array_sum(array_values($setSkill)); // Hanya Mengambil Index Dari Array Bukan Value
+                    foreach ($setSkill as $set) {
+                        if ($set === "HTML" || $set === "CSS") {
+                            $sumScore += 10;
+                        } elseif ($set === "Javascript" || $set === "RWD Bootstrap" || $set === "Typescript") {
+                            $sumScore += 20;
+                        } elseif ($set === "PHP" || $set === "MySQL") {
+                            $sumScore += 30;
+                        } elseif ($s == "Laravel") {
+                            $sumScore += 40;
+                        } else {
+                            $sumScore += 0;
+                        }
+                    }
+                    return $sumScore;
+                }
+
+                function getKategoriSkill($sumScoreValue){
+                    if ($sumScoreValue >= 100 && $sumScoreValue <= 150) {
+                        $getKategori = 'Sangat Baik';
+                    } else if ($sumScoreValue >= 60 && $sumScoreValue <= 99) {
+                        $getKategori = 'Baik';
+                    } else if ($sumScoreValue >= 40 && $sumScoreValue <= 59) {
+                        $getKategori = 'Cukup';
+                    } else if ($sumScoreValue > 0 && $sumScoreValue <= 39) {
+                        $getKategori = 'Kurang';
+                    } else if ($sumScoreValue == 0) {
+                        $getKategori = 'Tidak Memadai';
+                    } else {
+                        $getKategori = 'null';
+                    }
+
+                    return $getKategori;
+                }
 
                 if(isset($_POST['submit'])){
                     $nama = $_POST['yourName'];
                     $nim = $_POST['nim'];
                     $jenisKelamin = $_POST['jenisKelamin'];
-                    $prodi = $_POST['prodi'];
+                    $programStudi = $_POST['prodi'];
                     $skill = $_POST['skill'];
-                    $domisili = $_POST['domisili'];
+                    $domisiliMahasiswa = $_POST['domisili'];
                     $email = $_POST['yourEmail'];
+
+                    $scoreSkill = getScoreSkill($skill);
+
+                    $kategoriSkill = getKategoriSkill($scoreSkill);
+                    
                 }
                 ?>
-                Nama : <?= $nama ?><br>
-                NIM : <?= $nim ?><br>
-                Jenis Kelamin <?= $jenisKelamin ?><br>
-                Program Studi : <?= $prodi ?><br>
-                Skill : 
-                <?php 
-                foreach($skill as $s){ ?>
-                <?= $s ?> ,
-                <?php } ?>
-                <br>Domisili : <?= $domisili ?>
-                <br>Email : <?= $email ?>
-            <br /><br />
+                <p>
+                    <b> Nama: </b>
+                    &nbsp;<span class='hasil'><?= (isset($nama) ? $nama : 'null') ?></span>
+                </p>
+                <p>
+                    <b> NIM: </b>
+                    &nbsp;<span class='hasil'><?= (isset($nim) ? $nim : 'null') ?></span>
+                </p>
+                <p>
+                    <b> Jenis Kelamin: </b>
+                    &nbsp;<span class='hasil'><?= (isset($jenisKelamin) ? $jenisKelamin : 'null') ?></span>
+                </p>
+                <p>
+                    <b> Program Studi: </b>
+                    &nbsp;<span class='hasil'><?= (isset($programStudi) ? $programStudi : 'null') ?></span>
+                </p>
+                <p>
+                    <b> Skill: </b>
+                    &nbsp;
+                    <?php foreach((isset($skill) ? $skill : 'null') as $s){ ?>
+                    <span class='hasil'><?= (isset($s) ? $s : 'null') ?></span>
+                    <?php } ?>
+                </p>
+                <p>
+                    <b> Score Skill: </b>
+                    &nbsp;<span class='hasil'><?= (isset($scoreSkill) ? $scoreSkill : 'null') ?></span>
+                </p>
+                <p>
+                    <b> Kategori Skill: </b>
+                    &nbsp;<span class='hasil'><?= (isset($kategoriSkill) ? $kategoriSkill : 'null') ?></span>
+                </p>
+                <p>
+                    <b> Domisili: </b>
+                    &nbsp;<span class='hasil'><?= (isset($domisiliMahasiswa) ? $domisiliMahasiswa : 'null') ?></span>
+                </p>
+                <p>
+                    <b> Email: </b>
+                    &nbsp;<span class='hasil'><?= (isset($email) ? $email : 'null') ?></span>
+                </p>
+            </div>
+            <br />
             </div>
         </div>
       </section>

@@ -87,11 +87,13 @@ form {
 
 .image > * {
   border-radius: 10px;
+  /* width: 100%; */
 }
 
-img {
-  width: auto;
-  height: 10em;
+div > img {
+  display: block;
+  max-width: 100%;
+  height: auto;
 }
 
 .radio {
@@ -150,6 +152,10 @@ td {
 
 thead tr {
   background: var(--blue-bg);
+}
+
+.data-hasil > * {
+  padding: 10px 0;
 }
 
 @media screen and (max-width: 835px) {
