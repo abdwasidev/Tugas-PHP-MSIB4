@@ -1,7 +1,7 @@
 <?php
 $ar_prodi = ["SI"=>"Sistem Informasi", "TI"=>"Teknik Informatika","ILKOM"=>"Ilmu Komputer","TE"=>"Teknik Elektro"];
 
-$ar_skill = ["HTML"=>10,"CSS"=>10, "Javascript"=>20, "RWD Bootstrap"=>20, "PHP"=>30, "Typescript"=>30, "MySQL"=>30,"Laravel"=>40];
+$ar_skill = ["HTML"=>10,"CSS"=>10, "Javascript"=>20, "RWD Bootstrap"=>20, "PHP"=>30, "Python"=>30, "MySQL"=>30,"Laravel"=>40];
 $domisili = ["Jakarta","Bandung","Bekasi","Malang","Surabaya", "lainnya"];
 
 ?>
@@ -128,7 +128,7 @@ $domisili = ["Jakarta","Bandung","Bekasi","Malang","Surabaya", "lainnya"];
                     foreach ($setSkill as $set) {
                         if ($set === "HTML" || $set === "CSS") {
                             $sumScore += 10;
-                        } elseif ($set === "Javascript" || $set === "RWD Bootstrap" || $set === "Typescript") {
+                        } elseif ($set === "Javascript" || $set === "RWD Bootstrap" || $set === "Python") {
                             $sumScore += 20;
                         } elseif ($set === "PHP" || $set === "MySQL") {
                             $sumScore += 30;
