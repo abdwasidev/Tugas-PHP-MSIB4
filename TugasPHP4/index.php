@@ -128,11 +128,11 @@ $domisili = ["Jakarta","Bandung","Bekasi","Malang","Surabaya", "lainnya"];
                     foreach ($setSkill as $set) {
                         if ($set === "HTML" || $set === "CSS") {
                             $sumScore += 10;
-                        } elseif ($set === "Javascript" || $set === "RWD Bootstrap" || $set === "Python") {
+                        } else if ($set === "Javascript" || $set === "RWD Bootstrap" || $set === "Python") {
                             $sumScore += 20;
-                        } elseif ($set === "PHP" || $set === "MySQL") {
+                        } else if ($set === "PHP" || $set === "MySQL") {
                             $sumScore += 30;
-                        } elseif ($s == "Laravel") {
+                        } else if ($s == "Laravel") {
                             $sumScore += 40;
                         } else {
                             $sumScore += 0;
