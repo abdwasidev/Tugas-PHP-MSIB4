@@ -36,27 +36,38 @@
             return $tunjanganJabatan;
         }
 
-        public function setTunjanganKeluarga($status, $jabatan){
+        public function setTunjanganKeluarga($jabatan, $status){
             $scanGajiPokok = $this->setGajiPokok($this->jabatan);
             $tunjanganKeluarga = (($status === 'Menikah') ? (10 * $scanGajiPokok / 100) : 0);
             return $tunjanganKeluarga;
         }
 
-        public function setZakat($agama, $jabatan){
+        public function setGajiKotor($jabatan, $status){
             $scanGajiPokok = $this->setGajiPokok($this->jabatan);
-            $tunjanganZakat = (($agama === 'Islam') ? (2.5 * $scanGajiPokok / 100) : 0);
+            $scanTunjanganJabatan = $this->setTunjanganJabatan($this->jabatan);
+            $scanTunjanganKeluarga = $this->setTunjanganKeluarga($this->jabatan, $this->status);
+
+            $GajiKotor = $scanGajiPokok + $scanTunjanganJabatan + $scanTunjanganKeluarga;
+
+            return $GajiKotor;
+        }
+
+        public function setZakat($agama, $jabatan){
+            $scanGajiKotor = $this->setGajiKotor($this->jabatan, $this->status);
+            $scanGajiPokok = $this->setGajiPokok($this->jabatan);
+
+            $tunjanganZakat = (($agama === 'Islam' && $scanGajiKotor >= 6000000 ) ? (2.5 * $scanGajiPokok / 100) : 0);
+
             return $tunjanganZakat;
         }
 
         public function setGajiBersih($jabatan, $agama, $status){
-            $scanGajiPokok = $this->setGajiPokok($this->jabatan);
-            $scanTunjanganJabatan = $this->setTunjanganJabatan($this->jabatan);
-            $scanTunjanganKeluarga = $this->setTunjanganKeluarga($this->status, $this->jabatan);
+            $scanGajiKotor = $this->setGajiKotor($this->jabatan, $this->status);
             $scanZakat = $this->setZakat($this->agama, $this->jabatan);
 
-            $tunjanganGajiBersih = $scanGajiPokok + $scanTunjanganJabatan + $scanTunjanganKeluarga - $scanZakat;
+            $GajiBersih = $scanGajiKotor - $scanZakat;
 
-            return $tunjanganGajiBersih;
+            return $GajiBersih;
         }
 
         public function cetak(){
@@ -92,7 +103,7 @@
                 </p>
                 <p>
                     <b> Tunjangan Keluarga: </b>
-                    &nbsp;<span class='hasil'>Rp. ". (number_format($this->setTunjanganKeluarga($this->status, $this->jabatan),0,',','.')) ."</span>
+                    &nbsp;<span class='hasil'>Rp. ". (number_format($this->setTunjanganKeluarga($this->jabatan, $this->status),0,',','.')) ."</span>
                 </p>
                 <p>
                     <b> Zakat: </b>
