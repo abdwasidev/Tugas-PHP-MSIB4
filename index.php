@@ -67,6 +67,23 @@
           </p>
           <a href="TugasPHP4"><button>Demo Tugas PHP 4</button></a>
         </section>
+        <section class="card">
+          <p>
+           Lengkapi file Pegawai. php sebagai berikut:<br /><br />
+
+          setTunjab = 20% dari Gaji Pokok<br />
+          setTunkel= 10% dari Gaji Pokok untuk sudah menikah (ternary)<br />
+          setZakatProfesi= 2,5% dari GajiPokok untuk muslim dan Gaji Kotor minimal 6jt<br />
+          mencetak => nip, nama, jabatan, agama, status, Gaji Pokok, Tunj Jab, Tunkel, Zakat, Gaji Bersih <br /><br />
+
+
+          Buatlah objPegawai dengan data:<br />
+
+          5 instance object pegawai<br />
+          cetaklah semua struktur gaji pegawai
+          </p>
+          <a href="TugasPHP5"><button>Demo Tugas PHP 5</button></a>
+        </section>
       </section>
     </div>
   </body>
