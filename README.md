@@ -16,6 +16,7 @@
 - Tugas 2 : <a href="https://wasi.nasihosting.com/TugasPHP2/">Demo Tugas 2</a>
 - Tugas 3 : <a href="https://wasi.nasihosting.com/TugasPHP3/">Demo Tugas 3</a>
 - Tugas 4 : <a href="https://wasi.nasihosting.com/TugasPHP4/">Demo Tugas 4</a>
+- Tugas 5 : <a href="https://wasi.nasihosting.com/TugasPHP5/">Demo Tugas 4</a>
 
 ## Note
 
