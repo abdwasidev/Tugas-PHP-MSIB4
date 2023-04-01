@@ -84,6 +84,33 @@
           </p>
           <a href="TugasPHP5"><button>Demo Tugas PHP 5</button></a>
         </section>
+        <section class="card">
+          <p>
+           Buatlah Abstract class Bentuk2D sebagai induk kelas dengan member class:<br /><br />
+
+          - method abstract:<br />
+          fungsi luasBidang();<br />
+          fungsiKelilingBidang();<br />
+
+          Buatlah class-class keturunan:<br /><br />
+
+          - Lingkaran<br />
+          variable : jari2<br />
+          method : namaBidang(),luasBidang(), kelilingBidang()<br /><br />
+
+          - PersegiPanjang<br />
+          variable : panjang, lebar<br />
+          method : namaBidang(),luasBidang(), kelilingBidang()<br /><br />
+
+
+          - segitiga<br />
+          variable : alas, tinggi<br />
+          method : namaBidang(),luasBidang(), kelilingBidang()<br /><br />
+
+          cetaklah kedalam object dan tambahkan tag table
+          </p>
+          <a href="TugasPHP6"><button>Demo Tugas PHP 5</button></a>
+        </section>
       </section>
     </div>
   </body>
