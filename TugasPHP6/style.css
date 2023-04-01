@@ -37,7 +37,6 @@ h1 {
 
 .card {
   border-radius: 5px;
-  background-color: var(--green-cl);
   background: var(--blue-bg);
   color: var();
 }
@@ -60,7 +59,6 @@ h1 {
 
 .data-hasil {
   position: relative;
-  margin: 0 auto;
   background-color: var(--white-bg);
   margin: 0 30px;
   border-radius: 10px;
@@ -68,4 +66,17 @@ h1 {
 
 .data-hasil > * {
   padding: 8px 0;
+}
+
+tr {
+  text-align: center;
+}
+
+th,
+td {
+  padding: 10px 5px;
+}
+
+thead tr {
+  background: var(--blue-bg);
 }

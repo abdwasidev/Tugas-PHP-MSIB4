@@ -42,14 +42,13 @@
       <section class="card">
             <h3>Bangun Datar</h3><br />
         <?php
-
-            require './view/form.php';
+        
             require './model/ObjectBangunDatar.php';
 
         ?>
+        <br />
+        <br />
       </section>
-        <br />
-        <br />
     </div>
   </body>
 </html>
