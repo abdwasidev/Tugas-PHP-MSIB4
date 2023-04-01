@@ -109,7 +109,7 @@
 
           cetaklah kedalam object dan tambahkan tag table
           </p>
-          <a href="TugasPHP6"><button>Demo Tugas PHP 5</button></a>
+          <a href="TugasPHP6"><button>Demo Tugas PHP 6</button></a>
         </section>
       </section>
     </div>
