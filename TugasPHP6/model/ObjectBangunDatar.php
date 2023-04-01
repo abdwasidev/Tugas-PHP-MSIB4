@@ -52,7 +52,7 @@
                     <tr>
                         <td><?= $no ?> </td>
                         <td><?= $objectBD->namaBidang() ?></td>
-                        <td><?= $objectBD->luasBidang() ?> cm</td>
+                        <td><?= $objectBD->luasBidang() ?> cm<sup>2</sup></td>
                         <td><?= $objectBD->kelilingBidang() ?> cm</td>
                 </tr>
                 <?php $no++; } ?>
