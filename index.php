@@ -111,6 +111,14 @@
           </p>
           <a href="TugasPHP6"><button>Demo Tugas PHP 6</button></a>
         </section>
+        <section class="card">
+          <p>
+            1. Buatlah web sederhana menggunakan layoutit.com<br />
+            2. ubah isi web tersebut sesuai dengan gambar atau konten yang sudah diedit manual<br />
+            3. konten web dan layout web dibebaskan <br />
+          </p>
+          <a href="#"><button>Demo Tugas Responsive Web</button></a>
+        </section>
       </section>
     </div>
   </body>
