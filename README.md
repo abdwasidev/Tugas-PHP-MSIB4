@@ -18,6 +18,7 @@
 - Tugas 4 : <a href="https://wasi.nasihosting.com/TugasPHP4/">Demo Tugas 4</a>
 - Tugas 5 : <a href="https://wasi.nasihosting.com/TugasPHP5/">Demo Tugas 5</a>
 - Tugas 6 : <a href="https://wasi.nasihosting.com/TugasPHP6/">Demo Tugas 6</a>
+- Tugas 7 : <a href="https://abdwasidev.github.io/Tugas-PHP-MSIB4/TugasResponsiveWeb">Demo Tugas Responsive Web</a>
 
 ## Note
 
